@@ -1,0 +1,215 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Old Standard TT', serif;
+    background-color: rgb(43, 43, 48);
+} 
+
+/* Header **/
+header {
+    align-items: center;
+    display: flex;
+    background: darkgray;
+    width: 100%;
+    margin: auto;
+    position: sticky;
+    top: 0;
+    
+}
+
+.logo, .nav-links {
+    display: flex;
+    }
+
+.logo {
+    background: coral;   
+    flex: 1;
+}
+
+nav {
+    flex: 1;
+}
+
+main {
+    background-color: rgba(240, 255, 255, 0.632);
+}
+/* para la navegacion **/
+.nav-links {
+    color: darkslategray;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 50px;
+    text-decoration: none;
+}
+/* seccion 1 **/
+.presentacion {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center;
+    border-bottom: rgb(43, 43, 48) 3px solid;
+}
+/* Header 2 **/
+.intro-text h2 {
+    font-family: 'Bebas Neue';
+    font-size: 80px;
+}
+
+.intro-text p {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.introduccion {
+    flex: 2;
+}
+/* seccion de los botones **/
+.botones {
+    padding: 50px, 0px, 30px, 0px;
+}
+
+.boton1 {
+    border: 1px solid rgba(255, 255, 255);
+    border-radius: 4px;
+    background: rgb(0, 0, 0);   
+    color: rgb(255, 255, 255);
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.boton2 {
+    border: 1px solid rgba(255, 255, 255);
+    border-radius: 4px;
+    background: rgb(0, 0, 0);   
+    color: rgb(255, 255, 255);
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 30px 0px 0px 20px;
+}
+/* fondo e imagenes **/
+.sofabig {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    height: 40vh;
+}
+
+.sofabig img {
+    height: 100%;
+    animation: drop 1.5s ease;
+}
+
+@keyframes drop {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+    
+}
+
+.bgimage {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: .5;
+}
+/* estilo del footer **/
+footer {
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.728);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* mediaqery para distintos dispositivos..no me funciona el de tablet :-( **/
+@media screen and (max-width: 800px) {
+	.presentacion {
+		flex-direction: column;
+	}
+	.introduccion {
+		margin-top: 5vh;
+		text-align: center;
+	}
+	.intro-text h2 {
+		font-size: 30px;
+	}
+	.intro-text p {
+		font-size: 18px;
+	}
+	.boton1 {
+		padding: 10px 0px 0px 0px;
+    }
+    
+	.sofabig img {
+        height: 80%;
+        margin-bottom: 400px;
+    }
+    
+    header {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        font-size: 30px;
+        text-align: center;
+        padding: 10px 10px 0px 10px;
+    }
+	
+}
+
+@media screen and (max-width: 1106px) {
+	.presentacion {
+		flex-direction: column;
+	}
+	.introduccion {
+		margin-top: 5vh;
+		text-align: center;
+	}
+	.intro-text h2 {
+		font-size: 30px;
+	}
+	.intro-text p {
+		font-size: 18px;
+    }
+    
+    .botones{
+        flex-direction: column;
+    }
+    
+	.boton1 {
+		padding: 10px 0px 0px 0px;
+    }
+    
+	.sofabig img {
+        height: 40%;
+        margin-bottom: 500px;
+    }
+    
+    header {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        
+        font-size: 30px;
+        text-align: center;
+        padding: 10px 10px 0px 10px;
+    }
+	
+}
